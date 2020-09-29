@@ -1,0 +1,30 @@
+<h1>TinyMCE 5 Angular Demo</h1>
+ <editor
+ apiKey="n9b2phpaannjx1dpz90zekpby9r1jd70tnyeu1qmk740ro3b"
+  cloudChannel="5"
+  [disabled]="false"
+  id=""
+  initialValue=""
+  [inline]="false"
+  plugins=""
+  tagName="div"
+  toolbar=""
+  [(ngModel)]="data" 
+  (ngModelChange)="dataChanged($event)"
+   [init]="{
+     height: 500,
+     menubar: false,
+     plugins: [
+       'advlist autolink lists link image charmap print preview anchor',
+       'searchreplace visualblocks code fullscreen',
+       'insertdatetime media table paste code help wordcount'
+     ],
+     toolbar:
+       'undo redo | formatselect | bold italic backcolor | \
+       alignleft aligncenter alignright alignjustify | \
+       bullist numlist outdent indent | removeformat | help'
+   }"
+ ></editor>
+ <div class="col-6">  
+    <button type="submit"  class="btn btn-primary px-4">Login</button>  
+</div>  
